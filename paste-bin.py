@@ -76,7 +76,7 @@ def openPasteBin(_): #exectued on click (entire tkinter build)
                 x = event.x_root - bin.winfo_rootx() - bd
                 y = event.y_root - bin.winfo_rooty() - bd
                 index = bin.index('@%d,%d' % (x,y))
-                bin.insert(index, event.data)
+                bin.insert(index, event.data, '\n')
             else:
                 print('Error: reported event.widget not known')
         return event.action

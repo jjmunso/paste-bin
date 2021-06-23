@@ -18,7 +18,7 @@ It features drag and drop pasting in addition to normal typing and keyboard-shor
 
 ### TODO
 - Package into executable
-- New line after Pastes (see issue 2: https://github.com/jjmunso/paste-bin/issues/2)
+
 - Test Scroll-bar
 - Consider implementing multiple paste-blocks (see issue 4: https://github.com/jjmunso/paste-bin/issues/4)
 - Consider implementing file hold
@@ -27,3 +27,4 @@ It features drag and drop pasting in addition to normal typing and keyboard-shor
 
 ### Completed
 - ~~Fix Autostart Error (see issue 1: https://github.com/jjmunso/paste-bin/issues/1)~~
+- ~~New line after Pastes (see issue 2: https://github.com/jjmunso/paste-bin/issues/2)~~
