@@ -7,15 +7,18 @@ from tkinter.scrolledtext import ScrolledText
 
 #For indicator in taskbar
 import signal
+#gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk as gtk
+#gi.require_version('AppIndicator3', '0.1')
 from gi.repository import AppIndicator3 as appindicator
+#Use gi.require_version('Notify', '0.7')
 from gi.repository import Notify as notify
 
 APPINDICATOR_ID = 'paste-bin' #identifying tag for app
 
 #For Indicator
 def main(): # initalise indicator
-    indicator = appindicator.Indicator.new(APPINDICATOR_ID, os.path.abspath('img/accessories-clipboard.png'), appindicator.IndicatorCategory.SYSTEM_SERVICES)
+    indicator = appindicator.Indicator.new(APPINDICATOR_ID, os.path.abspath('/home/jjmunso/Documents/GitHub/paste-bin/img/clipboard.png'),  appindicator.IndicatorCategory.SYSTEM_SERVICES) #requires full path (if called on outside of /paste-bin)
     indicator.set_status(appindicator.IndicatorStatus.ACTIVE)
     indicator.set_menu(build_menu())
     notify.init(APPINDICATOR_ID)
@@ -34,7 +37,7 @@ def build_menu(): #create the menu
 
 def openPasteBin(_): #exectued on click (entire tkinter build)
     window = TkinterDnD.Tk()
-    window.iconphoto(False, PhotoImage(file='img/accessories-clipboard.png')) #change the app icon
+    window.iconphoto(False, PhotoImage(file='/home/jjmunso/Documents/GitHub/paste-bin/img/clipboard.png')) #requires full path (if called on outside of /paste-bin) to change app icon
     window.withdraw()
     window.title('pate-bin')
     window.geometry('675x475')
